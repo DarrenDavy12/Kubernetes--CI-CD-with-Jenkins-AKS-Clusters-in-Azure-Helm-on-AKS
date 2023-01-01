@@ -9,11 +9,9 @@ Once I configure the settings for the virtual machine image, I create a SSH key 
 
 Afterwards I go through the steps of installing Java-1.8 inside repos directory inside my Jenkins server. 
 I also had to update the bash profile.
-
 I needed to use wget to run some commands to download the Jenkins repo, import the key for the Jenkins package (redhat-stable)  for my virtual machine. Once done, I ran the yum install jenkins command.
 
 Next, needed to setup a security group on azure, added an inbound rule on the networking tab and the rule was to make sure the destination port ranges is et to 8080. 
-
 Once done,  back to the tab using port 8080 and refresh the page and the unlock Jenkins page appeared. 
 So I ran the command given on the page in the terminal to find the admin password and pasted the password back on the Jenkins tab. 
 
