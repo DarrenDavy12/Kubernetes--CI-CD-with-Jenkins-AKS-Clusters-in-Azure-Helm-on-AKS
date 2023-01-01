@@ -2,14 +2,14 @@
 
 Installing Jenkins Server for CI/CD to AKS Kubernetes Cluster:
 
-1. Connect to the Azure Portal [https://portal.azure.com/#home](https://portal.azure.com/#home) and search for Virtual Machines 
+1. First, connected to the Azure Portal [https://portal.azure.com/#home](https://portal.azure.com/#home) and search for Virtual Machines 
 
 ![Untitled](https://user-images.githubusercontent.com/42151912/210168483-30ed4f4c-cc75-44b3-a00d-a83bbab00746.png)
 
 ![Untitled 1](https://user-images.githubusercontent.com/42151912/210168544-9c0cf4d8-0c6b-4e76-ae4c-2d00e83f3f7e.png)
 
 
-2. I create new resource group and call it ‘jenkins’
+2. I created a new resource group and call it ‘jenkins’
 
 ![Untitled 2](https://user-images.githubusercontent.com/42151912/210168548-b0864ebb-45c1-4078-8a00-08b0c3a316ab.png)
 
@@ -113,7 +113,7 @@ This is directory we use as the JAVA_HOME
 ![Untitled 24](https://user-images.githubusercontent.com/42151912/210168707-82f26a08-136d-4b28-80c0-c0655d4078d3.png)
 
 
-9. I run `cd` and then `vi .bash_profile` to open the file, add the JAVA_HOME path and export JAVA_HOME. 
+9. I ran `cd` and then `vi .bash_profile` to open the file, add the JAVA_HOME path and export JAVA_HOME. 
 
 File should look like this. 
 
@@ -125,7 +125,7 @@ File should look like this.
 ![Untitled 26](https://user-images.githubusercontent.com/42151912/210168760-daeb7861-bcdb-4793-8275-15dcc6dce3f0.png)
 
 
-11. I run `yum install wget` to install wget. CentOs already has wget installed by default. 
+11. Ran `yum install wget` to install wget. CentOs already has wget installed by default. 
 
 ![Untitled 27](https://user-images.githubusercontent.com/42151912/210168767-04449c63-f3d0-4f26-8ab7-301fd7c05be5.png)
 
@@ -159,7 +159,7 @@ Then Jenkins to start at boot. `systemctl enable jenkins`
 ![Untitled 34](https://user-images.githubusercontent.com/42151912/210168794-ca7b07ae-9201-46cd-ae90-e7be0310386b.png)
 
 
-Now I can access Jenkins with the Public IP along with port 8080 in the browser. 
+I can access Jenkins with the Public IP along with port 8080 in the browser. 
 
 But first I need to setup a security group using Azure. I head to Networking. 
 
@@ -235,12 +235,13 @@ I run `ls-ltra` again and see that at the bottom the download has been unzipped.
 ![Untitled 52](https://user-images.githubusercontent.com/42151912/210171735-d1e21f80-5b81-4d8b-b285-7a887cd18e7f.png)
 
 
-Now I can delete the download by running `rm -rf apache-maven-3.6.0-bin.tar.gz`
+Afterwards, deleted the download by running `rm -rf apache-maven-3.6.0-bin.tar.gz`
 
 ![Untitled 53](https://user-images.githubusercontent.com/42151912/210171770-3d5260eb-4a99-4b78-929b-466bd037ae17.png)
 
 
-Now I will go through the process of installing `mvn` , first I run `cd root/` to enter the root directory and edit the bash_profile running `vi .bash_profile` I export Maven and give the path, also added the maven variable to the home /bin/ path. Then I save and quit.
+Now I will go through the process of installing `mvn` , first I run `cd root/` to enter the root directory and edit the bash_profile running `vi .bash_profile`, I export Maven and give the path, also added the maven variable to the home /bin/ path. 
+Then I save and quit.
 
 ![Untitled 54](https://user-images.githubusercontent.com/42151912/210171777-a7d04952-0028-464d-8fdf-5069c34adc88.png)
 
