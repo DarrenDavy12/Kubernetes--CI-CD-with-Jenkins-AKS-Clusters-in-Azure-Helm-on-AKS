@@ -12,7 +12,7 @@ This stores the docker images, so once deployment is happening, Kubernetes clust
 
 
 2. I create a new resource group on the next page and after I click next at the bottom. 
-3. 
+
 ![Untitled 2](https://user-images.githubusercontent.com/42151912/210175011-0a7957f4-62dd-4ef3-a6b7-3f7cbb77dd25.png)
 
 
