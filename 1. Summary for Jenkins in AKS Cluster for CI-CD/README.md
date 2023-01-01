@@ -23,4 +23,4 @@ For Maven and GIT, I used wget to fetch the maven bin file download, unzipped th
 
 The Docker setup in the Jenkins server was me running simple docker commands to get Docker up and running. Providing permissions files for the Jenkins user in the Jenkins server to access Docker. I add the user once done using the sudo usermod… command and then I edited the /etc/passwd file and change the automation server to bash.
 
-Now that is done, I can sudo in to the Jenkins server. Afterwards I headed back to the Jenkins tab on my browser, in manage plugins tab I install Maven integration and Docker pipeline.
+Once that was done, I'd used sudo on the jenkins docker container server. Afterwards I headed back to the Jenkins tab on my browser, in manage plugins tab I install Maven integration and Docker pipeline.
