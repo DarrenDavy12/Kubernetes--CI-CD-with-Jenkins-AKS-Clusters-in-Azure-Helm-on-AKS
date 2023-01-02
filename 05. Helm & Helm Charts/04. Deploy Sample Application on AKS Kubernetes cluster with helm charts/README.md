@@ -2,58 +2,69 @@
 
 Deploy Sample Application on AKS Kubernetes cluster with helm charts:
 
+
 1. I install the myqsl 1.6.9 with helm by running `helm install mysqldb mysql-1.6.9.tgz`
 
 ![Untitled](https://user-images.githubusercontent.com/42151912/210176505-bff7c81c-dd5a-4c1b-a473-8df17087289f.png)
 
+
 2. Next I run `helm list` and see the chart.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9886de7b-a687-4d1d-9492-054dea995e4a/Untitled.png)
+![Untitled 1](https://user-images.githubusercontent.com/42151912/210243108-4dd226cf-079d-496b-b6cb-1c52e7810642.png)
 
-1. Then I run `kubectl get pods` in another tab on the terminal under `/users/<user_name>` to see the status of the pods. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79722b08-971e-4f1e-9e8e-4c75142f77f1/Untitled.png)
+3. Then I run `kubectl get pods` in another tab on the terminal under `/users/<user_name>` to see the status of the pods. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/074ba634-e61d-4781-a718-4cc8113d9270/Untitled.png)
+![Untitled 2](https://user-images.githubusercontent.com/42151912/210243179-732e2167-eae2-4073-9c24-2cfba2997ddb.png)
 
-1. `kubectl get svc` to check the service.
+![Untitled 3](https://user-images.githubusercontent.com/42151912/210243195-b2c13598-3f53-4a12-94a3-ae39b27ffa17.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6325fc25-d8e9-41e7-8482-888ce8a8f754/Untitled.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ec77a69-93a9-4428-9346-1ec09341c046/Untitled.png)
+4. `kubectl get svc` to check the service.
+
+![Untitled 4](https://user-images.githubusercontent.com/42151912/210243213-5c0d3f85-b402-47df-b94b-17929c18596d.png)
+
+![Untitled 5](https://user-images.githubusercontent.com/42151912/210243223-61be8b67-a7b4-4e58-babf-edbd3a0907ea.png)
+
 
 1. `kubectl get pvc` for the physical volume. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/24415fce-452f-4383-a2c8-79a6ce09c737/Untitled.png)
+![Untitled 6](https://user-images.githubusercontent.com/42151912/210243246-ddacd65e-0766-4fd4-9202-084dc1a9cf04.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6b43ba21-f72d-4d28-bd3d-29d00ef84037/Untitled.png)
+![Untitled 7](https://user-images.githubusercontent.com/42151912/210243255-4d6ce3d7-72dd-425d-8b39-4b22fefb95ce.png)
+
 
 Now I choose any helm chart for the Kubernetes cluster, the helm chart Im going to use is supported by nginx so I return back to my tab open live with the jenkins-server, go to `cd mysql/templates/`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3d039d91-86e5-484f-bbc8-856136a83bf8/Untitled.png)
+![Untitled 8](https://user-images.githubusercontent.com/42151912/210243280-d02ef066-f294-4cb9-9e88-0889980dac4f.png)
+
 
 I next run `helm search repo stable/nginx` and it should be available.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03f54d1e-4d38-4b04-9621-81a85b16d785/Untitled.png)
+![Untitled 9](https://user-images.githubusercontent.com/42151912/210243307-100a73a1-e930-4177-aa7c-e1e9e047c08e.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/63293914-b5d5-4a07-8fd2-d8399994789f/Untitled.png)
+![Untitled 10](https://user-images.githubusercontent.com/42151912/210243330-6ceec9ec-d3e4-4f63-a64d-7b1bbe464cbc.png)
+
 
 Afterwards, I delete the release for mysqldb, first I run `helm list` and then `helm uninstall mysqldb` 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20fdbe3a-8e7a-460b-884e-d6dc0b3dcb94/Untitled.png)
+![Untitled 11](https://user-images.githubusercontent.com/42151912/210243362-218b6836-e73e-4729-9df0-210ee5c6175b.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0263f939-cba5-41f3-8526-51467b67bede/Untitled.png)
+![Untitled 12](https://user-images.githubusercontent.com/42151912/210243378-46dc8881-2d92-4881-beba-dd0a59e065ef.png)
+
 
 I check in my local machine terminal and run `kubectl get pods` and should see no resources. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/411c552c-6a56-4eb6-a15b-5037012a9a3d/Untitled.png)
+![Untitled 13](https://user-images.githubusercontent.com/42151912/210243401-782cce02-a089-4510-9afe-0e58fb23f68d.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5eaa0767-f9ba-4f1b-b232-86918e8c9834/Untitled.png)
+![Untitled 14](https://user-images.githubusercontent.com/42151912/210243429-a52accdb-9413-4261-8a68-165a30154007.png)
+
 
 Back in the jenkins-server I run `helm install nginx-test stable/nginx-ingress` after I run `helm list` 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07dee1a1-9455-41b6-9eba-64d95b4febc4/Untitled.png)
+![Untitled 15](https://user-images.githubusercontent.com/42151912/210243664-2e61625a-9ff4-486b-927d-dbea04cf12c9.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/141fbd7c-db7a-410f-a79f-0568249bfff1/Untitled.png)
+![Untitled 16](https://user-images.githubusercontent.com/42151912/210243681-2039dd84-b070-4a6d-a091-4730cb8419c3.png)
+
 
 On local terminal I run `kubectl get pods` again to see deployed apps.
