@@ -68,3 +68,5 @@ Back in the jenkins-server I run `helm install nginx-test stable/nginx-ingress` 
 
 
 On local terminal I run `kubectl get pods` again to see deployed apps.
+
+![Untitled 17](https://user-images.githubusercontent.com/42151912/210243772-f4fe711c-5360-4443-815b-8cf89176b534.png)
