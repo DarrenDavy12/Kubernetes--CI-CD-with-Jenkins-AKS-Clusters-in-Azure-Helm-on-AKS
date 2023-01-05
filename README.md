@@ -4,7 +4,7 @@
 This is my first attempt at Kubernetes on Azure.
 
 
-The method: 
+The process: 
 
 1. Setup Jenkins in AKS Cluster for CI/CD -> 
 2. Setup AKS Kubernetes in Azure -> 
